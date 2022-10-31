@@ -1,7 +1,7 @@
 # stat_modeling
 ### Decision Boundary
 ##### Ref: http://luisvalesilva.com/datasimple/random_forests.html
-'''python
+```python
 def compute_decision_boundaries(clf, x, y):
     mn_x1, mx_x1 = int(x[:,0].min())-1, int(x[:,0].max()+1)
     mn_x2, mx_x2 = int(x[:,1].min())-1, int(x[:,1].max()+1)
@@ -12,8 +12,8 @@ def compute_decision_boundaries(clf, x, y):
     y_pred = clf.predict(x_new).reshape(x1.shape)
     axes = [mn_x1, mx_x1, mn_x2, mx_x2]
     return x1, x2, y_pred, axes
-'''
-'''python
+```
+```python
 def plot_feature_space(clf, x, y):
     x1, x2, y_pred, axes = compute_decision_boundaries(clf, x, y)#
     custom_cmap = ListedColormap(['y','b','r'])
@@ -26,4 +26,4 @@ def plot_feature_space(clf, x, y):
     plt.xlabel(r"$x_1$", fontsize=20)
     plt.ylabel(r"$x_2$", fontsize=20, rotation=0)
     plt.show()
-'''
+```
