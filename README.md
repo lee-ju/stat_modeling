@@ -15,10 +15,10 @@ def compute_decision_boundaries(clf, x, y):
 ```
 ```python
 def plot_feature_space(clf, x, y):
-    x1, x2, y_pred, axes = compute_decision_boundaries(clf, x, y)#
+    x1, x2, y_pred, axes = compute_decision_boundaries(clf, x, y)
     custom_cmap = ListedColormap(['y','b','r'])
     plt.figure(figsize=(8, 4))
-    plt.contourf(x1, x2, y_pred, cmap=custom_cmap, alpha=0.1, linewidth=1)
+    plt.contourf(x1, x2, y_pred, cmap=custom_cmap, alpha=0.1)
     plt.plot(x[:, 0][y==0], x[:, 1][y==0], "yo", marker='.')
     plt.plot(x[:, 0][y==1], x[:, 1][y==1], "bs", marker='.')
     plt.plot(x[:, 0][y==2], x[:, 1][y==2], "rd", marker='.')
